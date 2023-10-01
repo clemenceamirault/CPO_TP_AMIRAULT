@@ -25,7 +25,7 @@ public class TP1_convertisseur_AMIRAULT {
       
        
        Scanner sd = new Scanner(System.in);
-      System.out.println("\n 1- De Celcius vers Kelvin"+ "\n 2- De Kelvin vers Celcius" + "\n 3- De Farenheit vers celcius"+ "\n 4- De Kelvin vers Farenheit"+"\n 5- De Farenheit vers Kelvin" );
+      System.out.println("\n 1- De Celcius vers Kelvin" + "\n 2- De Kelvin vers Celcius" + "\n 3- De Farenheit vers celcius"+ "\n 4- De Kelvin vers Farenheit"+"\n 5- De Farenheit vers Kelvin" );
       tc=sd.nextDouble(); // On demande a sd d'afficher qu'elle formule choisir
        
         
