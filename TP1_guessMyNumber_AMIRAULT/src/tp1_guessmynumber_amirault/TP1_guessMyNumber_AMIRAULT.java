@@ -18,15 +18,53 @@ public class TP1_guessMyNumber_AMIRAULT {
      * @param args the command line arguments
      */
     
-    public static void main(String[] args) { 
-      
+    public static void main(String[] args) {
       Random generateurAleat = new Random();
+      int n = generateurAleat.nextInt(100);
       
-      // Générer et afficher cinq nombres aléatoires entre 1 et 100
-        for (int i = 0; i < 5; i++) {
-            int n = generateurAleat.nextInt(100); // Génère un nombre aléatoire entre 1 et 100 inclus
-            System.out.println ("Nombre aleatoire #" + (i + 1) + ": " +generateurAleat);
+      int g;
+     Scanner sc = new Scanner (System.in);
+     System.out.println("choisissez un nombre entre 0 et 100");
+     g = sc.nextInt();
+     
+     int compt = 0;
+     
+     while (g != n){    
+         if (g > 2*n) {
+             System.out.println("ceci est beaucoup trop grand!");
+             Scanner scbis = new Scanner (System.in);
+             System.out.println("veuillez prendre un nouveau nombre entre 0 et 100");
+             g = scbis.nextInt();
+             compt += 1;
+                  
+         }
+         
+         if (g > n) {
+            System.out.println("ceci est grand!");
+            Scanner scbis = new Scanner (System.in);
+            System.out.println("choisissez un autre nombre entre 0 et 100");
+            g = scbis.nextInt();
+            compt += 1;
+         }
+         
+         if (g < n / 2) {
+             System.out.println("ceci est beaucoup trop petit !");
+             Scanner scbis = new Scanner( System.in);
+             System.out.println("choisissez un autre nombre entre 0 et 100");
+             g = scbis.nextInt();
+             compt += 1;
+         }
+         
+         if (g < n) {
+             System.out.println("ceci est trop petit!");
+             Scanner scbis = new Scanner (System.in);
+             System.out.println("choisissez un autre nombre entre 0 et 100");
+             g = scbis.nextInt();
+             compt += 1;
+         }
+
     }
+    System.out.println("vous avez trouve le bon nombre au bout de " + compt + "tentative, bravo !");
 }
 }    
 
