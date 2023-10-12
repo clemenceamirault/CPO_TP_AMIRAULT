@@ -15,6 +15,19 @@ public class TP2_Bieres_AMIRAULT {
      */
     public static void main(String[] args) {
         BouteilleBiere uneBiere = new BouteilleBiere() ;
+       uneBiere.nom = "Cuvée des trolls";
+       uneBiere.degreAlcool = (float) 7.0 ;
+       uneBiere.brasserie = "Dubuisson";
+       uneBiere.ouverte = false;
+       
+       uneBiere.lireEtiquette();
+       
+       BouteilleBiere deuxBiere = new BouteilleBiere();
+       deuxBiere.nom = "Leffe";
+       deuxBiere.degreAlcool = (float) 6.6 ;
+       deuxBiere.brasserie = "Abbaye de Leffe";
+       
+       deuxBiere.lireEtiquette ();
     }
     
 }
