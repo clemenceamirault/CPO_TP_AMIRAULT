@@ -14,20 +14,26 @@ public class TP2_Bieres_AMIRAULT {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BouteilleBiere uneBiere = new BouteilleBiere() ;
-       uneBiere.nom = "Cuvée des trolls";
-       uneBiere.degreAlcool = (float) 7.0 ;
-       uneBiere.brasserie = "Dubuisson";
-       uneBiere.ouverte = false;
+        BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", (float) 7.0,"Dubuisson") ;
        
        uneBiere.lireEtiquette();
        
-       BouteilleBiere deuxBiere = new BouteilleBiere();
-       deuxBiere.nom = "Leffe";
-       deuxBiere.degreAlcool = (float) 6.6 ;
-       deuxBiere.brasserie = "Abbaye de Leffe";
+       BouteilleBiere deuxBiere = new BouteilleBiere ("Leffe", (float) 6.6, "Abbaye de Leffe");
+       
        
        deuxBiere.lireEtiquette ();
+       
+       BouteilleBiere troisBiere = new BouteilleBiere ("IPA", (float) 5, "Effet Papillon");
+       
+       troisBiere.lireEtiquette();
+       
+       BouteilleBiere quatreBiere = new BouteilleBiere ("NEIPA", (float) 6, "Big Mountain Brewing");
+       
+       quatreBiere.lireEtiquette();
+       
+       BouteilleBiere cinqBiere = new BouteilleBiere ("Blonde 57", (float) 5.6, "Manivelle");
+       
+       cinqBiere.lireEtiquette();
     }
     
 }
