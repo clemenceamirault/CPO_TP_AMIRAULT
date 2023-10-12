@@ -14,16 +14,14 @@ public class BouteilleBiere {
   String brasserie;
   boolean ouverte;
   
-  public BouteilleBiere(String unNom, float unDegre, String 
-uneBrasserie) {
+ 
+  
+ public BouteilleBiere(String unNom, float unDegre, String uneBrasserie){ 
  nom = unNom;
  degreAlcool = unDegre;
  brasserie = uneBrasserie;
- ouverte = false;
+ ouverte = false; 
 }
-
-    
-  
 
   
 public void lireEtiquette() {
@@ -31,4 +29,17 @@ System.out.println("Bouteille de " + nom +" (" + degreAlcool +
  " degres) \nBrasserie : " + brasserie ) ;
  
 }
+
+public boolean Decapsuler(){
+    if (!ouverte){
+        ouverte = true;
+        return true;
+        
+    } else {
+        System.out.println("erreur : bière déjà ouverte");
+        return false;
+    }
+        
+}
+
 }
