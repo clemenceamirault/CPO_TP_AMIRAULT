@@ -15,7 +15,7 @@ public class TP2_Bieres_AMIRAULT {
      */
     public static void main(String[] args) {
         BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", (float) 7.0,"Dubuisson") ;
-       
+       System.out.println(uneBiere) ;
        uneBiere.lireEtiquette();
        
        BouteilleBiere deuxBiere = new BouteilleBiere ("Leffe", (float) 6.6, "Abbaye de Leffe");
