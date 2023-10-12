@@ -42,4 +42,13 @@ public boolean Decapsuler(){
         
 }
 
+@Override
+public String toString() {
+    String chaine_a_retourner;
+    chaine_a_retourner = nom + "(" + degreAlcool + " degrés) ouverte ?";
+    if (ouverte == true) chaine_a_retourner += "oui";
+    else chaine_a_retourner += "non";
+    return chaine_a_retourner;
+}
+
 }
