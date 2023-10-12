@@ -9,12 +9,23 @@ package tp2_bieres_amirault;
  * @author user
  */
 public class BouteilleBiere {
-  private String nom;
-  private float degreAlcool;
-  private String brasserie;
-  private boolean ouverte;
-   
+  String nom;
+  float degreAlcool;
+  String brasserie;
+  boolean ouverte;
+  
+  public BouteilleBiere(String unNom, float unDegre, String 
+uneBrasserie) {
+ nom = unNom;
+ degreAlcool = unDegre;
+ brasserie = uneBrasserie;
+ ouverte = false;
+}
 
+    
+  
+
+  
 public void lireEtiquette() {
 System.out.println("Bouteille de " + nom +" (" + degreAlcool +
  " degres) \nBrasserie : " + brasserie ) ;
