@@ -15,25 +15,30 @@ public class TP2_Bieres_AMIRAULT {
      */
     public static void main(String[] args) {
         BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", (float) 7.0,"Dubuisson") ;
-       System.out.println(uneBiere) ;
        uneBiere.lireEtiquette();
+       System.out.println(uneBiere) ;
        
        BouteilleBiere deuxBiere = new BouteilleBiere ("Leffe", (float) 6.6, "Abbaye de Leffe");
-       
-       
+      
        deuxBiere.lireEtiquette ();
+       deuxBiere.Decapsuler();
+       System.out.println(deuxBiere) ;
        
        BouteilleBiere troisBiere = new BouteilleBiere ("IPA", (float) 5, "Effet Papillon");
        
        troisBiere.lireEtiquette();
+       System.out.println(troisBiere) ;
        
        BouteilleBiere quatreBiere = new BouteilleBiere ("NEIPA", (float) 6, "Big Mountain Brewing");
        
+       quatreBiere.Decapsuler();
        quatreBiere.lireEtiquette();
+       System.out.println(quatreBiere) ;
        
        BouteilleBiere cinqBiere = new BouteilleBiere ("Blonde 57", (float) 5.6, "Manivelle");
        
        cinqBiere.lireEtiquette();
+       System.out.println(cinqBiere) ;
     }
     
 }
