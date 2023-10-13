@@ -9,5 +9,24 @@ package tp2_relation_1_amirault;
  * @author user
  */
 public class Voiture {
+    String modele;
+    String Marque;
+    Personne proprietaire = null;
+    int Puissance;
+    
+public Voiture (String unModele, String uneMarque, int unePuissance){
+    modele = unModele;
+    Marque = uneMarque;
+    Puissance = unePuissance;
+}  
+
+@Override
+public String toString(){
+    String chaine ;
+    
+     chaine = "\n" +"Modele: " + modele + "\n" + " Marque: " + Marque + "\n" +" PuissanceCV: " + Puissance;
+        return chaine;
+
+}
     
 }
