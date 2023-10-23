@@ -2,29 +2,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp3_heroic_fantasy_amirault;
+package Armes;
+
+import Armes.Arme;
 
 /**
  *
  * @author user
  */
-public class Baton extends Arme {
-    private int age;
+public class Epee extends Arme {
+    private int indicefiness;
     
-    public Baton(String nom, int nivattaque, int age) {
+    public Epee(String nom, int nivattaque, int indicefiness) {
         super(nom, nivattaque);
-        this.age = age;
+        this.indicefiness = indicefiness;
     }
     
-    public int getage(){
-    return age;
+    public int getindicefiness() {
+       return indicefiness; 
     }
     
     public String toString(){
-        return "Baton : "+ getnom()+ ", niveau d'attaque : "+ getnivattaque()+ ", Age : "+ getage();
+        return "Epee : "+ getnom() + ", niveau d'attaque " + getnivattaque() + ", indice finess : "+ indicefiness;
     }
 
     private String getnivattaque() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
 }
