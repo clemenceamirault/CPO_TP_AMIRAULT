@@ -20,6 +20,7 @@ public class Arme {
     public int getnivatt() {
     return nivattaque;
 }
+    @Override
     public String toString() {
         return "Arme : "+ nom + ", Niveau d'attaque : "+ nivattaque;
     }

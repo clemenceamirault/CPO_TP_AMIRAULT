@@ -22,6 +22,7 @@ public class Epee extends Arme {
        return indicefiness; 
     }
     
+    @Override
     public String toString(){
         return "Epee : "+ getnom() + ", niveau d'attaque " + getnivattaque() + ", indice finess : "+ indicefiness;
     }

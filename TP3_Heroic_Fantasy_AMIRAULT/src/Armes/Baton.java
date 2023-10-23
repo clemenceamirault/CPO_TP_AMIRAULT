@@ -22,6 +22,7 @@ public class Baton extends Arme {
     return age;
     }
     
+    @Override
     public String toString(){
         return "Baton : "+ getnom()+ ", niveau d'attaque : "+ getnivattaque()+ ", Age : "+ getage();
     }
@@ -29,4 +30,6 @@ public class Baton extends Arme {
     private String getnivattaque() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+   
 }

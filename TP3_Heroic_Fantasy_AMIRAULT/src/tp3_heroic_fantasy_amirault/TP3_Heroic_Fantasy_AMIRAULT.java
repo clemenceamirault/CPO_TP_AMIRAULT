@@ -8,6 +8,7 @@ import Armes.Epee;
 import Armes.Baton;
 import Armes.Arme;
 import java.util.ArrayList;
+import Armes.*;
 
 /**
  *
