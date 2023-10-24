@@ -16,12 +16,27 @@ public class Personnage {
     private ArrayList<Arme> inventaire;
     private Arme Arme_en_main;
     private Object armes;
+    private static int nombreTotalDePersonnages = 0;
+    static int nombreTotalDeGuerriers = 0;
+    static int nombreTotalDeMagiciens = 0;
     
     public Personnage (String nom, int nivdevie){
     this.nom = nom;
     this.nivdevie = nivdevie;
     inventaire = new ArrayList<>();
     Arme_en_main = null;
+    nombreTotalDePersonnages++;
+    }
+    
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        nombreTotalDePersonnages--;
+        if (this instanceof Guerrier) {
+            nombreTotalDeGuerriers--;
+        } else if (this instanceof Magicien) {
+            nombreTotalDeMagiciens--;
+        }
     }
     
     public void ajoutArmes (Arme armes){
@@ -61,9 +76,22 @@ public class Personnage {
         return nom;
     }
     
+     public static int getNombreTotalDePersonnages() {
+        return nombreTotalDePersonnages;
+    }
+
+    public static int getNombreTotalDeGuerriers() {
+        return nombreTotalDeGuerriers;
+    }
+
+    public static int getNombreTotalDeMagiciens() {
+        return nombreTotalDeMagiciens;
+    }
+}
+    
 
         
     
     
-}
+
 
