@@ -4,11 +4,15 @@
  */
 package tp3_heroic_fantasy_amirault;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.Epee;
 import Armes.Baton;
 import Armes.Arme;
 import java.util.ArrayList;
 import Armes.*;
+import Personnages.*;
 
 /**
  *
@@ -41,4 +45,35 @@ public class TP3_Heroic_Fantasy_AMIRAULT {
         }
     }
     
+    
+      ArrayList<Personnage> PersonnageList = new ArrayList ();
+      
+      Magicien Gandalf = new Magicien ("Gandalf", 65, true);
+      Magicien Garcimore = new Magicien ("Garcimore", 44, false);
+      
+      Guerrier Conan = new Guerrier ("Conan", 78, false);
+      Guerrier Lannister = new Guerrier ("Lannister", 45, true);
+      
+      
+      PersonnageList.add(Gandalf);
+      PersonnageList.add(Garcimore);
+      PersonnageList.add(Conan);
+      PersonnageList.add(Lannister);
+      
+      for (Personnage personnage : persoList){
+            System.out.println(personnage);
+
+} 
+      Guerrier guerrier = new Guerrier ("clem", 79, false);
+      Magicien magicien = new Magicien ("Lulu", 68, true);
+      
+      Baton b1 = new Baton("Chene",4,5);
+      Eppe E1 = new Epee("Excalibur",7,5);
+
 }
+      
+
+    
+      
+    
+
