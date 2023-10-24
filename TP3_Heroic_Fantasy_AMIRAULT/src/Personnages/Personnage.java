@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author user
  */
-public class Personnage {
+public class Personnage implements etreVivant{
     private String nom;
     private int nivdevie;
     private ArrayList<Arme> inventaire;
@@ -26,6 +26,21 @@ public class Personnage {
     inventaire = new ArrayList<>();
     Arme_en_main = null;
     nombreTotalDePersonnages++;
+    }
+    
+    @Override
+    public void seFatiguer(){
+        nivdevie -=10;
+    }
+    
+    @Override
+    public boolean estVivant(){
+        return nivdevie >0 ;
+    }
+    
+    @Override
+    public void estAttaque(int points){
+        nivdevie -= points;
     }
     
     @Override
@@ -87,7 +102,23 @@ public class Personnage {
     public static int getNombreTotalDeMagiciens() {
         return nombreTotalDeMagiciens;
     }
+
+    @Override
+    public void seFatiguer() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public boolean estVivant() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void estAttaque() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
+
     
 
         
