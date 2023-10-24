@@ -103,6 +103,9 @@ public class Personnage implements etreVivant{
         return nombreTotalDeMagiciens;
     }
 
+    public void attaquer(Personnage cible){
+        cible.estAttaque(10);
+    }
     
 }
 

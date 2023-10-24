@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
+package Personnages;
 
 /**
  *
  * @author user
  */
-public interface etreVivant {
+interface etreVivant {
     void seFatiguer();
     boolean estVivant();
-    void estAttaque();
-    
+    void estAttaque(int points);
 }
