@@ -20,7 +20,7 @@ public void activerCellule(){
     etat = !etat;
 }
 
-public void etaindreCellule(){
+public void eteindreCellule(){
     etat = false;
 }
 
@@ -42,9 +42,7 @@ public boolean getEtat(){
     }
 
 
-   CelluleLumineuse cellule = new CelluleLumineuse ();
-   
-   cellule.activerCellule();
+  
 
    
 
