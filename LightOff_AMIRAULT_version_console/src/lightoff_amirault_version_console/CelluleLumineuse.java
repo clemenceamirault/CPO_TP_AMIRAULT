@@ -45,4 +45,7 @@ public boolean getEtat(){
    CelluleLumineuse cellule = new CelluleLumineuse ();
    
    cellule.activerCellule();
-}
+
+   
+
+}    
