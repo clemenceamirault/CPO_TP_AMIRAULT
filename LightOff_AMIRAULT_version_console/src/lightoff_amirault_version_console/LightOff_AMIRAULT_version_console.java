@@ -21,7 +21,7 @@ public class LightOff_AMIRAULT_version_console {
         Cellule2.activerCellule();
         System.out.println("Etat de la cellule2 : "+ Cellule2);
         
-        Cellule1.activerCellule1();
+        Cellule1.activerCellule();
         System.out.println("Etat de la cellule après activation : "+ Cellule1);
         
         Cellule2.eteindreCellule();
@@ -30,7 +30,7 @@ public class LightOff_AMIRAULT_version_console {
         boolean EstEteint1 = Cellule1.estEteint();
         System.out.println("La cellule 1 est éteinte : "+ EstEteint1);
         
-        boolean EstEteint2 = Cellule2.EstEteint();
+        boolean EstEteint2 = Cellule2.estEteint();
         System.out.println("La cellule 2 est éteinte : "+ EstEteint2);
         
         
