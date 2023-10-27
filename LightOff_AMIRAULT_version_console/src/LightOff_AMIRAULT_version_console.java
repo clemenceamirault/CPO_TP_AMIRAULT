@@ -33,9 +33,14 @@ public class LightOff_AMIRAULT_version_console {
         boolean EstEteint2 = Cellule2.estEteint();
         System.out.println("La cellule 2 est éteinte : "+ EstEteint2);
         
+        // Crée une nouvelle grille de cellules lumineuses de 5 lignes et 5 colonnes
+        GrilleDejeu grille = new GrilleDejeu(5, 5);
+
+        // Affiche la grille
+        System.out.println("Grille de cellules lumineuses :");
+        System.out.println(grille);
         
-        
-        
+         
     }
     
 }
