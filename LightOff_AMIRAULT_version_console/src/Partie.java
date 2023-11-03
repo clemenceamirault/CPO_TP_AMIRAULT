@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Partie {
      private GrilleDejeu Grille;
     private int nbCoups;
+    private int nbCoupsMax;
 
     public Partie() {
         Grille = new GrilleDejeu(5, 5); // Crée une grille de 5x5 cellules par défaut
@@ -26,7 +27,7 @@ public class Partie {
         Scanner scanner = new Scanner(System.in);
 
         while (!Grille.cellulesToutesEteintes()) {
-            System.out.println("Grille de jeu après " + nbCoups + " coups :");
+            System.out.println("Grille de jeu apres " + nbCoups + " coups :");
             System.out.println(Grille);
             System.out.print("Entrez un coup (ligne, colonne, ou diagonale) : ");
 
@@ -43,14 +44,21 @@ public class Partie {
             } else if (coup.equals("diagonale")) {
                 Grille.activerDiagonaleDescendante();
             } else {
-                System.out.println("Coup invalide. Utilisez 'ligne [num]', 'colonne [num]', ou 'diagonale'.");
+                System.out.println("Coup invalide. Utilisez 'ligne', 'colonne', ou 'diagonale'.");
                 continue;
             }
 
             nbCoups++;
         }
-
-        System.out.println("Félicitations ! Vous avez éteint toutes les cellules en " + nbCoups + " coups.");
+         while (!Grille.cellulesToutesEteintes() && nbCoups < nbCoupsMax) {
+         }
+         
+          if (nbCoups < nbCoupsMax) {
+            System.out.println("Félicitations ! Vous avez éteint toutes les cellules en " + nbCoups + " coups.");
+        } else {
+            System.out.println("Vous avez atteint le nombre maximum de coups. Vous avez perdu !");
+        }
+        
     }
 
     public static void main(String[] args) {
