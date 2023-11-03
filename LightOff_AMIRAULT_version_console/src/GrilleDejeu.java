@@ -14,9 +14,12 @@ public class GrilleDejeu {
     private int nbLignes;
     private int nbColonne;
     
-    public GrilleDejeu (int p_nbLignes, int p_nbColonne){
-        nbLignes = p_nbLignes;
-        nbColonne = p_nbColonne;
+    public GrilleDejeu (int nbLignes, int nbColonne){
+        nbLignes = Math.max(2, nbLignes);
+        nbColonne = Math.max(2, nbColonne);
+        
+        nbLignes = nbLignes;
+        nbColonne = nbColonne;
         
         matriceCellules = new CelluleLumineuse[nbLignes][nbColonne];
         for (int i=0; i< nbLignes; i++){
