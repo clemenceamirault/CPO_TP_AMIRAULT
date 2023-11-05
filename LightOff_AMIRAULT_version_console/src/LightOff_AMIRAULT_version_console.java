@@ -15,6 +15,7 @@ public class LightOff_AMIRAULT_version_console {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
 
         System.out.println("Bienvenue dans le jeu LightOff !");
         System.out.println("Choisissez la difficulté :");
