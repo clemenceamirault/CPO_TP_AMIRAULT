@@ -12,20 +12,15 @@ public class Partie {
      private GrilleDejeu Grille;
     private int nbCoups;
     private int nbCoupsMax;
-    
-    public enum Difficulte {
-        FACILE,MOYEN,DIFFICILE
-    }
-    
-    public enum TailleGrille {
-        PETITE,MOYENNE,GRANDE
-    }
+
+  
 
     public Partie(int nbCoupsMax, Difficulte difficulte, TailleGrille tailleGrille) {
-        Grille = new GrilleDejeu(5, 5); // Crée une grille de 5x5 cellules par défaut
+        Grille = new GrilleDejeu(5, 5); 
         nbCoups = 0;
         this.nbCoupsMax = nbCoupsMax;
         int nbLignes, nbColonnes;
+     
         
         switch (tailleGrille) {
             case PETITE:
@@ -69,10 +64,21 @@ public class Partie {
                 break;
         }
         nbCoups = 0;
+        
+        if (Grille.cellulesToutesEteintes()){
+            
+        }
+        
+        public void appliquerAction(TypeAction typeAction){
+            switch(typeAction){
+                
+            }
+                    
+        }
     }
 
     public void initialiserPartie() {
-        Grille.melangerMatriceAleatoirement(10); // Mélange la grille pour garantir une solution réalisable
+        Grille.melangerMatriceAleatoirement(10); 
     }
 
     public void lancerPartie() {
