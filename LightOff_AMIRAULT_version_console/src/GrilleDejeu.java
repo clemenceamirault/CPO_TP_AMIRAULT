@@ -18,8 +18,7 @@ public class GrilleDejeu {
         nbLignes = Math.max(2, nbLignes);
         nbColonne = Math.max(2, nbColonne);
         
-        nbLignes = nbLignes;
-        nbColonne = nbColonne;
+        
         
         matriceCellules = new CelluleLumineuse[nbLignes][nbColonne];
         for (int i=0; i< nbLignes; i++){
@@ -103,6 +102,10 @@ public class GrilleDejeu {
         return true;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
 public String toString(){
     StringBuilder gridString = new StringBuilder();

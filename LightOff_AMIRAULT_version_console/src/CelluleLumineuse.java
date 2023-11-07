@@ -38,6 +38,6 @@ public boolean getEtat(){
      */
     @Override
     public String toString(){
-    return etat? "X" : "O";
+    return etat? " | X |" : " | O | ";
     }
 }    
