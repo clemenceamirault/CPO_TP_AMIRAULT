@@ -1,3 +1,7 @@
+
+import java.awt.GridLayout;
+import javax.swing.JButton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -9,12 +13,32 @@
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
 
+        GrilleDejeu Grille ;
+        int nbCoups;
+
     /**
      * Creates new form FenetrePrincipale
      */
     public FenetrePrincipale() {
         initComponents();
+        int nbLignes = 10;
+        int nbColonnes = 10;
+        this.Grille.activerLigneDeCellules(0);
+        repaint();
+        this.Grille = new GrilleDejeu(nbLignes, nbColonnes);
+        PanneauGrille.setLayout (new GridLayout (nbLignes, nbColonnes));
+        
+        for (int i=0; i<nbLignes; i++){
+            for (int j=0; j<nbColonnes; j++){
+                JButton bouton_cellule = new CelluleGraphique(Grille.matriceCellules[i][j], 36,36);
+                PanneauGrille.add(bouton_cellule);
+            }
+        }
     }
+     public void initialiserPartie(){
+            Grille.EteindreToutesLesCellules();
+            Grille.melangerMatriceAleatoirement(10);
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -25,21 +49,41 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        PanneauGrille = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanneauGrille.setBackground(new java.awt.Color(255, 204, 204));
+
+        javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
+        PanneauGrille.setLayout(PanneauGrilleLayout);
+        PanneauGrilleLayout.setHorizontalGroup(
+            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        PanneauGrilleLayout.setVerticalGroup(
+            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
+
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 400, 400));
+
+        jButton1.setText("btnLigne0");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +121,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanneauGrille;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
